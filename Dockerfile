@@ -28,7 +28,7 @@ RUN \
   if [ -z ${OSCAM_VERSION+x} ]; then \
     OSCAM_VERSION=$(svn info --show-item revision https://svn.streamboard.tv/oscam/trunk ); \
   fi && \
-  svn checkout https://svn.streamboard.tv/oscam/trunk@${OSCAM_VERSION} /tmp/oscam-svn && \
+  git clone https://github.com/fairbird/NCam.git /tmp/oscam-svn && \
   cd /tmp/oscam-svn && \
   ./config.sh \
     --enable all \
