@@ -49,6 +49,7 @@ RUN \
     NO_PLUS_TARGET=1 \
     OSCAM_BIN=/usr/bin/oscam \
     pcsc-libusb && \
+  move /tmp/oscam-svn/Distribution/ncam-Unofficial-git7db6535-x86_64-alpine-linux-musl /usr/bin/oscam && \
   echo "**** fix broken permissions from pcscd install ****" && \
   chown root:root \
     /usr/sbin/pcscd && \
