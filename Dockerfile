@@ -12,6 +12,7 @@ LABEL maintainer="saarg"
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
+    git \
     build-base \
     libusb-dev \
     linux-headers \
